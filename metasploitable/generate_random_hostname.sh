@@ -4,6 +4,9 @@
 # 2. Make this file executable before running: chmod +x generate_random_hostname.sh
 # 3. Have a list in the root directory called: hostnamelist.txt
 # 4. Run: bash generate_random_hostname.sh
+# 5. Append line to /etc/rc.local: 
+#       nohup /root/generate_random_hostname.sh &
+#       This must be before: exit 0
 
 # Random Sort the hostnamelist.txt file, then pipe the first line on the list and output it the file /root/newname.txt 
 sort -R /root/hostnamelist.txt | head -n 1 > /root/newname.txt
@@ -21,4 +24,8 @@ tr -d '\r' < /root/newhostsfile.txt > /etc/hosts
 
 # Remove carriage return line feed from /root/newname.txt and overwrite the /etc/hostname file
 tr -d '\r' < /root/newname.txt > /etc/hostname
+
+# Delete this script after running once
+rm -r /root/generate_random_hostname.sh
+
 
