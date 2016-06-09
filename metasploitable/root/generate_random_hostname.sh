@@ -4,7 +4,11 @@
 # 2. Make this file executable before running: chmod +x generate_random_hostname.sh
 # 3. Have a list in the root directory called: hostnamelist.txt
 # 4. Run: bash generate_random_hostname.sh
+<<<<<<< HEAD:metasploitable/root/generate_random_hostname.sh
 # 5. Append line to /etc/rc.local:
+=======
+# 5. Append line to /etc/rc.local: 
+>>>>>>> origin/master:metasploitable/generate_random_hostname.sh
 #       nohup /root/generate_random_hostname.sh &
 #       This must be before: exit 0
 
@@ -26,4 +30,10 @@ tr -d '\r' < /root/newhostsfile.txt > /etc/hosts
 tr -d '\r' < /root/newname.txt > /etc/hostname
 
 # Delete this script after running once
+<<<<<<< HEAD:metasploitable/root/generate_random_hostname.sh
 # rm -r /root/generate_random_hostname.sh
+=======
+rm -r /root/generate_random_hostname.sh
+
+
+>>>>>>> origin/master:metasploitable/generate_random_hostname.sh
