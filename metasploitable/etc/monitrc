@@ -290,33 +290,33 @@ set httpd port 2812 and use address 172.16.33.83  # only accept connection from 
 # NOTE: 1 CYCLE = ~2 MINUTES
 # TEAM IP Address Scheme: pending
 
-check host metasploitable-ftp with address localhost
+check host ftp with address localhost
 	if failed port 21 type tcp protocol ftp within 1 cycle
 	then alert
-check host metasploitable-ssh with address localhost
+check host ssh with address localhost
 	if failed port 22 type tcp protocol ssh within 1 cycle
 	then alert
-check host metasploitable-telnet with address localhost
+check host telnet with address localhost
 	if failed port 23 within 1 cycle
 	then alert
-check host metasploitable-smtp with address localhost
+check host smtp with address localhost
 	if failed port 25 type tcp protocol smtp within 1 cycle
 	then alert
-check host metasploitable-dns with address localhost
+check host dns with address localhost
 	if failed port 53 type udp protocol dns within 1 cycle
 	then alert
-check host metasploitable-http with address localhost
+check host http with address localhost
 	if failed port 80 type tcp protocol http within 1 cycle
 	then alert
-check host metasploitable-nfs with address localhost
+check host nfs with address localhost
 	if failed port 2049 within 1 cycle
 	then alert
-check host metasploitable-mysql with address localhost
+check host mysql with address localhost
 	if failed port 3306 type tcp protocol mysql within 1 cycle
 	then alert
-check host metasploitable-postgresql with address localhost
+check host postgresql with address localhost
 	if failed port 5432 within 1 cycle
 	then alert
-check host metasploitable-vnc with address localhost
+check host vnc with address localhost
 	if failed port 5900 within 1 cycle
 	then alert
